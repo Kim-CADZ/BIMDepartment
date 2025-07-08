@@ -1,4 +1,3 @@
-# BIMDepartment
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -22,25 +21,55 @@
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
       text-align: center;
     }
-    .title {
-      font-size: 24px;
-      margin-bottom: 10px;
+    .main-button {
+      background-color: #0077b6;
+      color: white;
+      padding: 12px 20px;
+      font-size: 18px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-bottom: 20px;
+      transition: background-color 0.3s;
     }
-    .equation {
-      font-size: 20px;
-      font-weight: bold;
-      color: #0077b6;
+    .main-button:hover {
+      background-color: #005f87;
     }
-    .footer {
-      margin-top: 20px;
-      font-size: 14px;
-      color: #777;
+    .members {
+      display: none;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 10px;
+    }
+    .member-button {
+      background-color: #90e0ef;
+      border: none;
+      padding: 10px;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    .member-button:hover {
+      background-color: #48cae4;
     }
   </style>
 </head>
 <body>
   <div class="card">
-    <div class="equation">Ingo + Hakim + Anne-Shirley = BIM Department</div>
+    <button class="main-button" onclick="toggleMembers()">BIM Department</button>
+    <div class="members" id="memberButtons">
+      <button class="member-button">Hakim</button>
+      <button class="member-button">Ingo</button>
+      <button class="member-button">Anne-Shirley</button>
+    </div>
   </div>
+
+  <script>
+    function toggleMembers() {
+      const members = document.getElementById('memberButtons');
+      members.style.display = (members.style.display === 'flex') ? 'none' : 'flex';
+    }
+  </script>
 </body>
 </html>
