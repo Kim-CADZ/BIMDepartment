@@ -41,9 +41,7 @@
 </head>
 <body>
   <div class="card">
-    <div class="title">Team Formula</div>
     <div class="equation">Ingo + Hakim + Anne-Shirley = BIM Department</div>
-    <div class="footer">Autodesk ACC Embedded Card</div>
   </div>
 </body>
 </html>
